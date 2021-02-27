@@ -41,10 +41,10 @@ Resources:
                   VPCRegion: !Ref AWS::Region
 
     # Create ECR repository manually because it can't be deleted by deleting this cloudformation stack
-    #ECR:
-    #    Type: AWS::ECR::Repository
-    #    Properties:
-    #        RepositoryName: keycloak-ha-mysql
+    ECR:
+       Type: AWS::ECR::Repository
+       Properties:
+           RepositoryName: keycloak-ha-mysql
 
     InternetGateway:
         Type: AWS::EC2::InternetGateway
